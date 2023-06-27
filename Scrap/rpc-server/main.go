@@ -12,11 +12,10 @@ import (
 )
 
 var (
-	rdb = &RedisClient{} // make the RedisClient with global visibility in the 'main' scope
+	rdb = &RedisClient{}
 )
 
 func main() {
-
 	ctx := context.Background()
 
 	err := rdb.InitClient(ctx, "redis:6379", "")

@@ -35,10 +35,6 @@ func main() {
 		ctx.JSON(consts.StatusOK, utils.H{"message": "pong"})
 	})
 
-	h.GET("/hello", func(c context.Context, ctx *app.RequestContext) {
-		ctx.JSON(consts.StatusOK, utils.H{"hello": "world"})
-	})
-
 	h.POST("/api/send", sendMessage)
 	h.GET("/api/pull", pullMessage)
 
